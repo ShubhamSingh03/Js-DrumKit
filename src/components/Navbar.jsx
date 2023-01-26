@@ -6,15 +6,16 @@ const Navbar = () => {
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:py-4 sm:px-6 lg:px-8">
           <div className="sm:flex sm:items-center sm:justify-between">
             <div className="text-center sm:text-left">
+              {/* title-heading */}
               <h1 className="text-2xl font-bold text-headline sm:text-3xl">
                 Javascript Drum Kit
               </h1>
-
+              {/* subtitle-heading */}
               <p className="mt-1.5 text-sm text-paragraph">
                 March to the beat of your own drummer! 🎉
               </p>
             </div>
-
+            {/* buttons/links to pages */}
             <div className="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center">
               <a
                 href="https://github.com/ShubhamSingh03/Js-DrumKit"
