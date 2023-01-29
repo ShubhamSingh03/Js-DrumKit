@@ -1,3 +1,9 @@
+/*************************************
+ *
+ * Common Button component
+ *
+ *************************************/
+
 const Button = ({ btnName, className }) => {
   return (
     <>

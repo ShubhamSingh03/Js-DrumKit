@@ -1,6 +1,11 @@
 import drum from "../images/drum-set.png";
 
-// footer component
+/*******************************************
+ *
+ * Footer Component
+ *
+ *******************************************/
+
 const Footer = () => {
   return (
     <>
