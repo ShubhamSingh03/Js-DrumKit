@@ -1,13 +1,22 @@
+import { useState } from "react";
+
+// main image
 import drumBlue from "../images/drum-blue.png";
 
-import { useState, useEffect } from "react";
-
+// soundData.js
 import soundsData from "../soundData/soundsData";
 
+// components
 import DrumPad from "../components/DrumPad";
 
-//  icons
+// react-icons
 import { IoVolumeHigh, IoVolumeLow } from "react-icons/io5";
+
+/********************************************
+ *
+ * Home Page
+ *
+ ********************************************/
 
 const Home = () => {
   const [drumPads] = useState(soundsData);
@@ -24,9 +33,13 @@ const Home = () => {
 
   return (
     <>
-      {/* controls */}
+      {/********************************************
+       * Controls
+       ********************************************/}
       <div className="flex justify-around items-center pt-6">
-        {/* On/off toggle switch */}
+        {/********************************************
+         * Controls -  On/off toggle switch
+         ********************************************/}
         <div className="p-1 rounded-3xl bg-gradient-to-b from-[#0000000d] to-[#edf1f4] shadow-volumeSliderShadow sm:p-4">
           <div className=" flex justify-center items-center">
             <p className={`${isPowerOn ? "" : "font-bold"} text-sm  uppercase`}>
@@ -51,8 +64,9 @@ const Home = () => {
             </p>
           </div>
         </div>
-
-        {/* volume range slider */}
+        {/********************************************
+         * Controls -  volume range slider
+         ********************************************/}
         <div className="relative flex justify-center items-center p-2 rounded-3xl bg-gradient-to-b from-[#0000000d] to-[#edf1f4] shadow-volumeSliderShadow sm:p-5">
           <IoVolumeLow size={25} />
           <input
@@ -67,7 +81,13 @@ const Home = () => {
           <IoVolumeHigh size={25} />
         </div>
       </div>
-      {/* drum kit image */}
+      {/********************************************
+       * Controls ends here
+       ********************************************/}
+
+      {/********************************************
+       * Drumpad component & Drum Kit main image
+       ********************************************/}
       <div className="relative md:w-[700px] mx-auto">
         <img className="w-full" src={drumBlue} alt="Drum Kit Blue" />
         {drumPads.map((pad) => (
